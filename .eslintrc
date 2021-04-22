@@ -1,0 +1,65 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "amd": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.js"
+      ],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "tsconfig.json"
+      }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "prettier/prettier": ["error"],
+    "quotes": 2,
+    "react/jsx-filename-extension": 0,
+    "arrow-body-style": ["warn", "as-needed"],
+    "react/jsx-props-no-spreading": 0,
+    "react/react-in-jsx-scope": 0,
+    "import/extensions": "off",
+    "import/prefer-default-export": "warn",
+    "no-use-before-define": 0,
+    "react/button-has-type": "warn",
+    "react/jsx-curly-brace-presence": 0,
+    "react/require-default-props": "warn",
+    "no-param-reassign": "warn",
+    "no-plusplus": "warn"
+  }
+}
